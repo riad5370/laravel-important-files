@@ -1,0 +1,27 @@
+            <h1>How to clone Laravel Project Github to cPanel.</h1>
+
+    01) go to cPanel terminal.(search cPanel. terminal).
+    02) write ls and choose your directory or project name.
+    03) Go to Your target directory or project (cd directory/project name).
+    04) Now write, git clone + your project github clone link + .   
+        example: (git clone https://github.com/abir5370/To-do-app.git .)
+    05) Now Run,  (composer install)
+
+    06)Copy [.env.example] file to [.env] on the root folder. You can type copy [.env.example .env]   if using the command prompt Windows or (cp .env.example .env) if using the terminal
+
+    07) Open your .env file and configuration (DB_DATABASE= ,DB_USERNAME=,DB_PASSWORD=,         APP_URL=) etc.
+
+    08)Run (php artisan key:generate)
+    09)Run (php artisan migrate).
+    10)go to your project and create [.htaccess] file or use terminal (touch .htaccess)-->this command auto file create.
+    11) open .htaccess file and write code.
+              <!-- now setup complete-->
+    now your code update process:: it's normal process.
+    1) update your code pc/editor. 
+    2) then update your local git repogitory.(regular process).
+    3) then write your cPanel terminal your project directory.
+       git pull + your git clone directory
+       example:: (git pull git clone https://github.com/abir5370/To-do-app.git)
+    
+
+    Note: if [http://localhost:8000/] ignore (10) and (11) replace (php artisan serve).
